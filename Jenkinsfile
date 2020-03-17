@@ -8,7 +8,7 @@ pipeline {
             steps {
                 sh 'echo "Start Uploading"'
                 sh '''
-                    s3Upload(file:'index.html', bucket:'jenkinspipeline')
+                    s3Upload(file:"index.html", bucket:"jenkinspipeline")
                     echo "Index.html Uploaded"
                     ls -lah
                    '''
