@@ -7,8 +7,8 @@ pipeline {
         stage('Upload to AWS') {
             steps {
                 sh 'echo "Start Uploading"'
-                sh '''
-                    s3Upload(file:"index.html", bucket:"jenkinspipeline")
+                sh 's3Upload(file:"index.html", bucket:"jenkinspipeline")'
+                sh ''' 
                     echo "Index.html Uploaded"
                     ls -lah
                    '''
