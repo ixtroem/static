@@ -11,7 +11,7 @@ pipeline {
         stage('Upload to AWS') {
             steps {
                 sh 'echo "Start Uploading"'
-                sh 's3Upload(file: ${params.filename}, bucket:${params.bucketname})'
+                sh 's3Upload(file:${params.filename}, bucket:${params.bucketname}, path:${params.filename})'
                 sh ''' 
                     echo "Index.html Uploaded"
                     ls -lah
